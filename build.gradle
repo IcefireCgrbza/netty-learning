@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'com.feimao'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+ext {
+    nettyVersion = '4.1.34.Final'
+    reactorCoreVersion = '3.3.3.RELEASE'
+    reactorNettyVersion = '0.9.5.RELEASE'
+    rxjavaVersion = '2.2.18'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'io.netty', name: 'netty-all', version: nettyVersion
+    compile group: 'io.projectreactor', name: 'reactor-core', version: reactorCoreVersion
+    compile group: 'io.projectreactor.netty', name: 'reactor-netty', version: reactorNettyVersion
+    compile group: 'io.reactivex.rxjava2', name: 'rxjava', version: rxjavaVersion
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
